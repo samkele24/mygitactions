@@ -1,17 +1,16 @@
-
 name: Super-Linter
 
 on: push
 
-Jobs:
+jobs:
   super-lint:
     name: Lint code base
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      -name: Checkout code
-       uses: Action/checkout@v2
+      - name: Checkout code
+        uses: action/checkout@V2
 
-       -name: Run Super-Linter
+      - name: Run Super-Linter
         uses: GitHub/super-linter@v3
         env:
           DEFAULT_BRANCH: main
